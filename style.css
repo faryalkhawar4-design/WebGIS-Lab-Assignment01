@@ -1,0 +1,52 @@
+html, body { height: 100%; margin: 0; font-family: "Segoe UI", Arial, sans-serif; }
+body { display: flex; flex-direction: column; }
+header {
+  background: #003575;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;   /* add this line */
+}
+header h1 { margin: 0; font-size: 1.4rem; }
+header p { margin: 2px 0 0; font-size: .85rem; opacity: .85; }
+#map { flex: 1; }            /* map size: fills the space under the header */
+
+.city-marker {
+  width: 24px; height: 24px; border-radius: 50%;
+  border: 1px solid #fff;                    /* was 2px */
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);       /* slightly softer, optional */
+  color: #fff; text-align: center; line-height: 20px; font-size: 12px;
+}
+.station-marker {
+  width: 24px; height: 24px; border-radius: 4px;
+  border: 1px solid #fff;                    /* was 2px */
+  box-shadow: 0 1px 3px rgba(0,0,0,.4);       /* slightly softer, optional */
+  color: #fff; text-align: center;
+  line-height: 20px; font-size: 10px; font-weight: bold;
+}
+
+.popup h3 { margin: 0 0 5px; color: #01411c; }
+
+.aqi-marker {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.5);
+  opacity: .85;
+}
+
+.legend {
+  background: #fff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 20px;
+  box-shadow: 0 1px 5px rgba(0,0,0,.4);
+}
+.legend h4 { margin: 8px 0 3px; font-size: 13px; color: #01411c; }
+.legend h4:first-child { margin-top: 0; }
+.legend .row { display: flex; align-items: center; }
+.legend .sym {
+  display: inline-block; margin-right: 8px; flex-shrink: 0;
+  border: 1px solid #fff; box-shadow: 0 0 2px rgba(0,0,0,.6);
+}
+.legend .circle { border-radius: 50%; }
+.legend .square { border-radius: 3px; }
