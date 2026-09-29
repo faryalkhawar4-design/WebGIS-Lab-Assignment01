@@ -1,5 +1,15 @@
 // ---------- Map ----------
-const map = L.map("map").setView([30.4, 69.4], 5);
+const pakistanBounds = [
+  [23.5, 60.5],   // southwest corner [lat, lon]
+  [37.5, 78.0]    // northeast corner [lat, lon]
+];
+
+const map = L.map("map", {
+  maxBounds: pakistanBounds,
+  maxBoundsViscosity: 0.7   // makes it hard to pan far outside Pakistan
+});
+
+map.fitBounds(pakistanBounds);
 
 // ---------- Basemaps ----------
 const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
