@@ -92,7 +92,7 @@ const cityLayer = L.geoJSON(null, {
 
 fetch("data/cities.geojson")
   .then(response => response.json())
-  .then(data => cityLayer.addData(data))
+  .then(Data => cityLayer.addData(data))
   .catch(error => console.error("Could not load cities.geojson:", error));
 
 // ---------- AQI layer ----------
@@ -125,7 +125,7 @@ const stationLayer = L.geoJSON(null, {
 
 fetch("data/stations.geojson")
   .then(response => response.json())
-  .then(data => stationLayer.addData(data))
+  .then(Data => stationLayer.addData(data))
   .catch(error => console.error("Could not load GeoJSON:", error));
 
   // ---------- Provinces layer (polygons, loaded from GeoJSON) ----------
